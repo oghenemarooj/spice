@@ -24,7 +24,7 @@ include_once 'account_header.php'
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-xs-12 traffic">
                         <div class="dashboard-list-box">
-                            <h4 class="gray">Recent Posts</h4>
+                            <h4 class="gray">Recent Postskl</h4>
                             <div class="table-box">
                                 <table class="basic-table">
                                     <thead>
