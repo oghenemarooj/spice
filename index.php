@@ -29,7 +29,7 @@ include_once 'account_header.php'
                                 <table class="basic-table">
                                     <thead>
                                         <tr>
-                                            <th>Date</th>
+                                            <th>Dates</th>
                                             <th>Post ID</th>
                                             <th>Title</th>
                                             <th>No of Post</th>
