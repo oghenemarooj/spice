@@ -17,7 +17,7 @@ include_once 'account_header.php'
                         <div class="dashboard-stat color-4">
                             <div class="dashboard-stat-content"><h4>126</h4> <span>uses me</span></div>
                             <div class="dashboard-stat-icon"><i class="im im-icon-user"></i></div>
-                            <div class="dashboard-stat-item"><p>View all</p></div>
+                            <div class="dashboard-stat-item"><p>View nhh all</p></div>
                         </div>
                     </div>
                 </div>
