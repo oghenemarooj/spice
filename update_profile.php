@@ -11,35 +11,44 @@ $bio = clean('bio');
 
 
 
-$update = $con->query("UPDATE users set name ='$name', phone ='$phone', bio = '$bio', WHERE id = '$user_id' ");
+$update = $con->query("UPDATE users set name ='$name', phone ='$phone', bio = '$bio' WHERE id = '$user_id' ");
 
 
 if (!$update) {
     $doit = 0;
-    $msg. =
+    $msg .= 'could not update'.$con->error;
+}else {
+    $msg = "profile updated";
+    $doit = 1;
 }
+
 /* check if there is an image */
 
-if ($_FILES['avatar']['name']) {
+if ($_FILES['avatar']['name'] && $doit == 1) {
     $image = $_FILES['avatar']['name'];
     $filename = $auth_user['email'].basename($image);
  
     $target = "../avatars/".basename($filename);
     
-    $upload = move_uploaded_file($_FILES['avatar']['tmp_mame'], $target);
+    $upload = move_uploaded_file($_FILES['avatar']['tmp_name'], $target);
     
     
     if ($upload) {
-        $sql = $con->query("UPDATE users set avatar ='$filename', , WHERE id = '$user_id' ");
+        $sql = $con->query("UPDATE users set avatar ='$filename' WHERE id = '$user_id' ");
         $msg = "profile updated";
     } else {
-        $msg = "image could not be uploaded"; 
+        $doit = 0;
+        $msg .= "image could not be uploaded"; 
+        echo $upload;
     }
-    
+}  
+if ($doit == 1) {
+    header('location: profile.php?msg=profile updated');
 } else {
-    $msg = "profile updated";
+    //header('location: profile.php?msg='.$msg);
+    echo $msg;
 }
 
-header('location: profile.php?msg='.$msg);
+
 
 ?>

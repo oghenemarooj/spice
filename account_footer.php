@@ -22,6 +22,20 @@
     <script src="../js/dashboard-custom.js"></script>
     <script src="../js/jpanelmenu.min.js"></script>
     <script src="../js/counterup.min.js"></script>
+
+
+
+    <?php
+    if (isset($_GET['msg'])) {
+        $msg = $_GET['msg'];
+        echo "
+        <script>
+            alert(''".$msg."');
+        </script>
+        "
+    }
+    ?>
+    
 </body>
 <!-- Mirrored from cyclonethemes.com/demo/html/suchana/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Dec 2019 19:40:15 GMT -->
 </html>

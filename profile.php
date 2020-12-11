@@ -13,7 +13,7 @@ include_once 'account_header.php'
                         <form method="POST" action="update_profile.php" enctype='multipart/form-data'>
                             <!-- Avatar -->
                             <div class="edit-profile-photo">
-                                <img src="../avatars/user-avatar.jpg" alt="">
+                                <img src="<?php echo '../avatars/' .$auth_user['avatar']?>" alt="">
                                 <div class="change-photo-btn">
                                     <div class="photoUpload">
                                         <span><i class="fa fa-upload"></i> Upload Photo</span>
@@ -35,9 +35,7 @@ include_once 'account_header.php'
                                 <input value="<?php echo $auth_user['email']?>" readonly type="text">
 
                                 <label>Your Bio *</label>
-                                <textarea id="notes" cols="30" name="bio" rows="2">
-                                <?php echo $auth_user['bio']?>
-                            </textarea>
+                                <textarea id="notes" cols="30" name="bio" rows="2"><?php echo $auth_user['bio']?></textarea>
 
 
                             </div>

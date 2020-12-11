@@ -85,8 +85,8 @@ include_once 'auth.php';
                     <ul>
                         <li><a href="index.php"><i class="sl sl-icon-settings"></i> Dashboard</a></li>
                         <li><a href="profile.php"><i class="sl sl-icon-user"></i> Edit Profile</a></li>
-                        <li><a href="dashboard-addtour.html"><i class="sl sl-icon-plus"></i> Add Post</a></li>
-                        <li><a href="dashboard-booking.html"><i class="sl sl-icon-list"></i> Post List</a></li> 
+                        <li><a href="add_post.php"><i class="sl sl-icon-plus"></i> Add Post</a></li>
+                        <li><a href="posts.php"><i class="sl sl-icon-list"></i>All Posts</a></li> 
                         <li><a href="index.html"><i class="sl sl-icon-power"></i> Logout</a></li>
                     </ul>
                 </div>
